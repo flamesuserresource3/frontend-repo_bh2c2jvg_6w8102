@@ -26,19 +26,19 @@ const projects = [
 
 function ProjectCard({ icon: Icon, title, description, tags }) {
   return (
-    <div className="group relative rounded-2xl border border-black/5 bg-white p-6 shadow-sm transition hover:shadow-xl">
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-blue-50/0 to-blue-50/60 opacity-0 group-hover:opacity-100 transition pointer-events-none" />
+    <div className="group relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.06)] transition hover:shadow-[0_0_0_1px_rgba(56,189,248,0.35)] hover:bg-white/[0.05] backdrop-blur">
+      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition pointer-events-none bg-gradient-to-b from-sky-500/10 via-transparent to-transparent" />
       <div className="relative z-10">
-        <div className="inline-flex items-center justify-center rounded-lg bg-blue-600 text-white h-10 w-10">
+        <div className="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-sky-500 to-indigo-600 text-white h-10 w-10 shadow-lg shadow-sky-600/30">
           <Icon size={18} />
         </div>
-        <h3 className="mt-4 text-lg font-semibold text-gray-900">{title}</h3>
-        <p className="mt-2 text-sm text-gray-600 leading-relaxed">{description}</p>
+        <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
+        <p className="mt-2 text-sm text-slate-300 leading-relaxed">{description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((t) => (
             <span
               key={t}
-              className="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-1 text-xs text-gray-700 ring-1 ring-gray-200"
+              className="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 text-xs text-slate-200 ring-1 ring-white/10"
             >
               {t}
             </span>
@@ -49,7 +49,7 @@ function ProjectCard({ icon: Icon, title, description, tags }) {
             href="https://github.com/fajartheggman"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700"
+            className="inline-flex items-center gap-2 text-sm font-medium text-sky-300 hover:text-sky-200"
           >
             View on GitHub <ExternalLink size={16} />
           </a>
@@ -61,11 +61,11 @@ function ProjectCard({ icon: Icon, title, description, tags }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-white to-slate-50">
+    <section id="projects" className="py-20 bg-gradient-to-b from-black to-slate-950">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">Featured Work</h2>
-          <p className="mt-3 text-gray-600">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white">Featured Work</h2>
+          <p className="mt-3 text-slate-300">
             A snapshot of capabilities across the stack — from delightful user interfaces to resilient backend services and cloud automation.
           </p>
         </div>
